@@ -25,33 +25,47 @@ When analyzing complex problems or planning, always use sequential thinking firs
 3. Revise previous thoughts as understanding deepens
 4. Test hypotheses before concluding
 
+## Library Documentation
+
+When needing up-to-date library documentation or API references:
+
+1. Use `mcp_context7_resolve-library-id` to find the correct library ID
+2. Use `mcp_context7_get-library-docs` to fetch documentation
+3. Focus on implementation patterns relevant to MAESTRO
+4. Provide code examples that fit MAESTRO's architecture
+
 ## MAESTRO-Specific Behaviors
 
 When working with MAESTRO components:
 
 ### Backend Development (Python/FastAPI)
+
 - Always check `maestro_backend/requirements.txt` for dependencies
 - Follow FastAPI patterns for API endpoints
 - Use proper async/await patterns for database operations
 - Reference existing patterns in `maestro_backend/api/` directory
 
 ### Frontend Development (React/TypeScript)
+
 - Follow existing component patterns in `maestro_frontend/src/components/`
 - Use TypeScript interfaces from `maestro_frontend/src/types/`
 - Follow the established UI patterns and styling
 - Check `maestro_frontend/package.json` for dependencies
 
 ### Database Operations
+
 - Use SQLAlchemy patterns from `maestro_backend/database/`
 - Follow migration patterns in `maestro_backend/init-db/`
 - Reference existing schema in `init-db/01-schema.sql`
 
 ### AI/ML Components
+
 - Follow patterns in `maestro_backend/ai_researcher/`
 - Use existing agent patterns in `maestro_backend/ai_researcher/agentic_layer/`
 - Reference RAG patterns in `maestro_backend/ai_researcher/core_rag/`
 
 ### Docker & Deployment
+
 - Use existing docker-compose configurations
 - Follow patterns in `docker-compose.yml`, `docker-compose.cpu.yml`, `docker-compose.gpu.yml`
 - Reference nginx configuration in `nginx/nginx.conf`
