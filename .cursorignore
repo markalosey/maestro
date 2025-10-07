@@ -1,0 +1,244 @@
+# AI Assistant Indexing Control for MAESTRO Project
+# Prevents semantic poisoning and ensures consistent rule application
+
+# =============================================================================
+# MAESTRO-SPECIFIC EXCLUSIONS
+# =============================================================================
+
+# Model caches and AI/ML files (EXCLUDE - large files, not source code)
+maestro_model_cache/
+maestro_datalab_cache/
+.cache/
+*.cache/
+transformers_cache/
+torch_cache/
+*.bin
+*.pt
+*.pth
+*.onnx
+*.ckpt
+*.safetensors
+
+# Database files and data directories (EXCLUDE - runtime data)
+maestro_backend/data/
+data/
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Generated reports and outputs (EXCLUDE - generated content)
+reports/
+pdfs/
+*.generated.*
+validation-runs/
+test-results/
+
+# =============================================================================
+# DOCKER & CONTAINERS (EXCLUDE)
+# =============================================================================
+docker-logs.txt
+*.log
+
+# =============================================================================
+# BUILD OUTPUTS (EXCLUDE)
+# =============================================================================
+dist/
+build/
+out/
+target/
+bin/
+.next/
+.nuxt/
+site/
+docs/_build/
+
+# =============================================================================
+# DEPENDENCIES (EXCLUDE)
+# =============================================================================
+node_modules/
+vendor/
+.pnpm-store/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# =============================================================================
+# PYTHON CACHE & COMPILED (EXCLUDE)
+# =============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+cython_debug/
+
+# =============================================================================
+# NODE.JS CACHE & BUILD (EXCLUDE)
+# =============================================================================
+.npm/
+.eslintcache
+.stylelintcache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+.node_repl_history
+*.tgz
+.yarn-integrity
+.parcel-cache/
+
+# =============================================================================
+# IDE FILES (EXCLUDE)
+# =============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+.history/
+*.vsix
+
+# =============================================================================
+# OS FILES (EXCLUDE)
+# =============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+*~
+
+# =============================================================================
+# TEMPORARY FILES (EXCLUDE)
+# =============================================================================
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*~
+temp.txt
+
+# =============================================================================
+# ENVIRONMENT & SECRETS (EXCLUDE)
+# =============================================================================
+.env
+.env.*
+.env.local
+.env.*.local
+.secrets
+*.key
+*.pem
+*.p12
+*.p8
+*.pfx
+cookies.txt
+
+# =============================================================================
+# TESTING & EVALUATION (EXCLUDE)
+# =============================================================================
+evaluation/
+.coverage
+htmlcov/
+.tox/
+.nox/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+cover/
+
+# =============================================================================
+# LOCAL DEVELOPMENT & CUSTOMIZATIONS (EXCLUDE)
+# =============================================================================
+LOCAL_CHANGES.md
+.local/
+*.local
+.gitignore.local
+.claude/
+CLAUDE.md
+own_docs/
+notes.md
+WEBSOCKET_REWRITE_TODO.md
+
+# =============================================================================
+# DRAFT & EXPERIMENTAL CONTENT (EXCLUDE)
+# =============================================================================
+*.draft.md
+*.draft.feature
+*.experimental.*
+*.wip.*
+*.test.*
+*.tmp.*
+
+# =============================================================================
+# MAESTRO-SPECIFIC TEMPORARY FILES (EXCLUDE)
+# =============================================================================
+maestro_backend/test_*.py
+maestro_backend/fix_*.py
+maestro_backend/check_*.py
+maestro_backend/cleanup_*.py
+maestro_backend/apply_*.py
+maestro_backend/update_*.py
+maestro_backend/nuke_and_restart.sh
+maestro_backend/ai_researcher/core_rag/vector_store_safe.py
+setup.sh
+add-*-config.ps1
+
+# =============================================================================
+# RELEASE & VERSION CONTROL (EXCLUDE)
+# =============================================================================
+release-notes/
+
+# =============================================================================
+# STREAMLIT & EVALUATION (EXCLUDE)
+# =============================================================================
+.streamlit/
+
+# =============================================================================
+# KEEP IMPORTANT FILES (INCLUDE)
+# =============================================================================
+# Keep example reports and documentation assets
+!docs/example-reports/
+!docs/assets/images/
+!docs/assets/*.png
+!docs/assets/*.jpg
+!images/*.png
+!images/*.jpg
+!images/*.jpeg
+!images/*.gif
+!images/*.svg
+
+# Keep small config files
+!config.json
+!tokenizer.json
+!tokenizer_config.json
+!special_tokens_map.json
+
+# Keep essential VSCode settings
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Keep environment example
+!.env.example

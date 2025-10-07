@@ -1,0 +1,85 @@
+---
+description: Core Behavioral Patterns for MAESTRO AI Assistant
+globs: ["**/*"]
+alwaysApply: true
+---
+
+# Core Behavioral Patterns for MAESTRO
+
+## File Operations
+
+When creating or modifying files, always follow this git workflow:
+
+1. Run `pwd` to verify current location
+2. Run `git status` to check repository state
+3. Run `git add .` to stage all changes
+4. Run `git commit -m "descriptive message"` to commit immediately
+5. Run `git push origin main` to push to remote
+
+## Complex Analysis
+
+When analyzing complex problems or planning, always use sequential thinking first:
+
+1. Use `mcp_sequential-thinking_sequentialthinking` tool
+2. Structure reasoning process with clear thoughts
+3. Revise previous thoughts as understanding deepens
+4. Test hypotheses before concluding
+
+## MAESTRO-Specific Behaviors
+
+When working with MAESTRO components:
+
+### Backend Development (Python/FastAPI)
+- Always check `maestro_backend/requirements.txt` for dependencies
+- Follow FastAPI patterns for API endpoints
+- Use proper async/await patterns for database operations
+- Reference existing patterns in `maestro_backend/api/` directory
+
+### Frontend Development (React/TypeScript)
+- Follow existing component patterns in `maestro_frontend/src/components/`
+- Use TypeScript interfaces from `maestro_frontend/src/types/`
+- Follow the established UI patterns and styling
+- Check `maestro_frontend/package.json` for dependencies
+
+### Database Operations
+- Use SQLAlchemy patterns from `maestro_backend/database/`
+- Follow migration patterns in `maestro_backend/init-db/`
+- Reference existing schema in `init-db/01-schema.sql`
+
+### AI/ML Components
+- Follow patterns in `maestro_backend/ai_researcher/`
+- Use existing agent patterns in `maestro_backend/ai_researcher/agentic_layer/`
+- Reference RAG patterns in `maestro_backend/ai_researcher/core_rag/`
+
+### Docker & Deployment
+- Use existing docker-compose configurations
+- Follow patterns in `docker-compose.yml`, `docker-compose.cpu.yml`, `docker-compose.gpu.yml`
+- Reference nginx configuration in `nginx/nginx.conf`
+
+## Quality Assurance
+
+When making changes:
+
+- Always verify the current working directory
+- Check git status before making changes
+- Use descriptive commit messages that reference MAESTRO components
+- Push changes immediately after committing
+- Test changes in the appropriate environment (backend/frontend/docker)
+
+## Documentation
+
+When modifying MAESTRO:
+
+- Update relevant documentation in `docs/` directory
+- Follow existing documentation patterns
+- Update README.md if adding new features
+- Reference architecture documentation in `docs/architecture/`
+
+## Testing
+
+When adding features:
+
+- Add tests to `tests/` directory following existing patterns
+- Test both backend and frontend components
+- Use existing test patterns in `tests/agentic_layer/` and `tests/core_rag/`
+- Ensure tests pass before committing
