@@ -43,6 +43,8 @@ services:
       dockerfile: Dockerfile
     image: maestro-backend
     container_name: maestro-backend
+    env_file:
+      - .env
     depends_on:
       postgres:
         condition: service_healthy
@@ -109,6 +111,8 @@ services:
       dockerfile: Dockerfile
     image: maestro-doc-processor  # Unique image name
     container_name: maestro-doc-processor
+    env_file:
+      - .env
     command: ["python", "-u", "services/background_document_processor.py"]
     working_dir: /app
     volumes:
@@ -141,6 +145,8 @@ services:
       dockerfile: Dockerfile
     image: maestro-cli  # Unique image name
     container_name: maestro-cli
+    env_file:
+      - .env
     working_dir: /app
     volumes:
       - maestro-data:/app/ai_researcher/data
